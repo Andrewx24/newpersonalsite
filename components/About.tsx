@@ -1,52 +1,28 @@
+// components/About.tsx
 import Image from "next/image";
-import { motion } from "framer-motion";
 import profileImg from '@/public/assets/profile/profile.png';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { AnimatedSection } from "./AnimatedSection";
 
 const About = () => {
-  // Animation variants for staggered animations
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1
-    }
-  };
-
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto px-4 max-w-6xl">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-          className="space-y-12"
-        >
-          {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center max-w-3xl mx-auto">
+        <div className="space-y-12">
+          {/* Header Section */}
+          <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary dark:text-white">
               Building Modern Enterprise Solutions
             </h2>
             <p className="text-muted-foreground text-lg">
               Transforming business requirements into scalable, efficient software solutions
             </p>
-          </motion.div>
+          </AnimatedSection>
 
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Profile Image */}
-            <motion.div variants={itemVariants} className="relative group">
+            <AnimatedSection className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary-light rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200" />
               <div className="relative">
                 <Image
@@ -58,10 +34,10 @@ const About = () => {
                 />
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-            </motion.div>
+            </AnimatedSection>
 
             {/* Content Cards */}
-            <motion.div variants={itemVariants} className="space-y-6">
+            <AnimatedSection className="space-y-6">
               <Card>
                 <CardHeader>
                   <CardTitle>Technical Excellence</CardTitle>
@@ -101,9 +77,9 @@ const About = () => {
                   </ul>
                 </CardContent>
               </Card>
-            </motion.div>
+            </AnimatedSection>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

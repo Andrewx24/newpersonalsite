@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { FaGithub, FaLinkedinIn, FaMedium } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { useToast } from './hooks/use-toast';
+import { useToast } from './ui/use-toast';
 import { appConfig } from '@/lib/config';
 
 interface FormData {
