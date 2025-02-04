@@ -49,19 +49,18 @@ export default function RootLayout({ children }: RootLayoutProps) {
     >
       <head>
         {/* Add structured data for better SEO */}
-        <script
-          
-  defer
-  data-website-id="6772bc0897077ee580064227"
-  data-domain="andrewaliaj.dev"
-   src="/js/script.js"
-  >
-
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateStructuredData()),
-          }}
-        />
+  <script
+    defer
+    data-website-id="6772bc0897077ee580064227"
+    data-domain="andrewaliaj.dev"
+    src="/js/script.js"
+  />
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(generateStructuredData()),
+    }}
+  />
         {/* Preconnect to external resources */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link 
