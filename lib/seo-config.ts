@@ -1,4 +1,3 @@
-// lib/seo-config.ts
 import { Metadata } from 'next'
 
 interface SeoConfig {
@@ -79,11 +78,20 @@ export const seoConfig: SeoConfig = {
   },
 }
 
+// Type for structured data values
+type StructuredDataValue =
+  | string
+  | number
+  | boolean
+  | null
+  | { '@type': string; [key: string]: StructuredDataValue }
+  | StructuredDataValue[]
+
 // Type for structured data
 export interface StructuredData {
   '@context': string
   '@type': string
-  [key: string]: any
+  [key: string]: StructuredDataValue
 }
 
 // Generate structured data for the website

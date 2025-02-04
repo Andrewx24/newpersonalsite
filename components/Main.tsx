@@ -80,7 +80,7 @@ const Main = () => {
                 Available for Projects
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
-                Hey, I'm Andrew Aliaj
+              Hey, I&apos;m Andrew Aliaj
               </h1>
             </motion.div>
 
